@@ -1,4 +1,4 @@
-project_name: go-cli-template
+project_name: hogecli
 env:
   - GO111MODULE=on
 before:
@@ -6,12 +6,12 @@ before:
     - go mod tidy
 builds:
   - main: .
-    binary: go-cli-template
+    binary: hogecli
     ldflags:
       - -s -w
-      - -X github.com/kmdkuk/go-cli-template/version.Version={{.Version}}
-      - -X github.com/kmdkuk/go-cli-template/version.Revision={{.ShortCommit}}
-      - -X github.com/kmdkuk/go-cli-template/version.BuildDate={{.Date}}
+      - -X github.com/kmdkuk/hogecli/version.Version={{.Version}}
+      - -X github.com/kmdkuk/hogecli/version.Revision={{.ShortCommit}}
+      - -X github.com/kmdkuk/hogecli/version.BuildDate={{.Date}}
     goos:
       - windows
       - darwin
